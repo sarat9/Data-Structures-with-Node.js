@@ -1,0 +1,8 @@
+{
+  "name": "Data Structures with Node.js",
+  "version": "1.0",
+  "author": "Sarat Chandra E <sarat.e99@gmail.com>",
+  "dependencies": {
+    "jest": "^24.8.0"
+  }
+}
