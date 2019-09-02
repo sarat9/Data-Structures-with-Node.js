@@ -6,8 +6,10 @@ console.log("Data Structures With NodeJs");
 var unSortedArray = [9, 2, 5, 1, 8, 3, 4, 6, 0, 7]
 
 
-//Calling
-runSortAlgos()
+//Calling Example functions
+//runSortAlgos()
+
+
 
 
 // Running DS and Algos with Examples
@@ -40,7 +42,7 @@ function tryQueueExample() {
     console.log(queue.dequeue());
     console.log(queue);
 }
-  
+
 function tryBinarySearchTree() {
     //BINARY SEARCH TREE
     const binarySearchTree = new DS.BinarySearchTree();
@@ -94,6 +96,52 @@ function tryLinkedListExample() {
     console.log(linkedList.size);
 }
 
+function tryDirectedGraphListExample() {
+    // Directed Graph
+    let graph = new DS.DirectedGraphList();
+    graph.addVertex('A');
+    graph.addVertex('B');
+    graph.addVertex('C');
+    graph.addVertex('D');
+    graph.addEdges('A', 'B');
+    graph.addEdges('A', 'D');
+    graph.addEdges('B', 'D');
+    graph.addEdges('B', 'C');
+    graph.addEdges('D', 'A');
+    graph.depthFirstTraverse();
+    graph.breadthFirstTraverse('A');
+}
+
+
+function tryDirectedGraphnodeListExample() {
+    // Directed Graph with Node Object Implementation
+    let graph = new DS.DirectedGraphListnode();
+    graph.addVertex('A');
+    graph.addVertex('B');
+    graph.addVertex('C');
+    graph.addVertex('D');
+    graph.addEdges('A', 'B');
+    graph.addEdges('A', 'D');
+    graph.addEdges('B', 'C');
+    graph.addEdges('B', 'D');
+    graph.depthFirstTraverse();
+    graph.breadthFirstTraverse('A');
+}
 
 
 
+function tryWeightedDirectedGraphListExample() {
+    // Weighted Directed Graph
+    let graph = new DS.WeightedDirectedGraph();
+    graph.addVertex('A');
+    graph.addVertex('B');
+    graph.addVertex('C');
+    graph.addVertex('D');
+    graph.addEdges('A', 'B', 10);
+    graph.addEdges('A', 'D', 20);
+    graph.addEdges('B', 'C', 5);
+    graph.addEdges('B', 'D', 8);
+    graph.print()
+    graph.depthFirstTraverse();
+    graph.breadthFirstTraverse('A');
+}
