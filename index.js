@@ -15,6 +15,8 @@ var unSortedArray = [9, 2, 5, 1, 8, 3, 4, 6, 0, 7]
 
 
 
+
+
 // Running DS and Algos with Examples
 
 function runSortAlgos() {
@@ -24,6 +26,7 @@ function runSortAlgos() {
     sortAlgos.BubbleSort(unSortedArray);
     sortAlgos.SelectionSort(unSortedArray);
 }
+
 
 function tryStackExample() {
     //STACK
@@ -160,3 +163,41 @@ function tryPriorityQueueWithLinkedList() {
     console.log(priorityQueue.dequeue());
     priorityQueue.print();
 }
+
+
+
+function tryBinaryMinHeapExample() {
+    // Binary Max Heap
+    let binaryMinHeap = new DS.BinaryMinHeap();
+    binaryMinHeap.insert(1);
+    binaryMinHeap.insert(2);
+    binaryMinHeap.insert(7);
+    binaryMinHeap.insert(8);
+    binaryMinHeap.insert(20);
+    binaryMinHeap.insert(18);
+    binaryMinHeap.insert(14);
+    binaryMinHeap.insert(30);
+    binaryMinHeap.insert(23);
+    console.log(binaryMinHeap.heap);
+    console.log(binaryMinHeap.extractMin());
+    console.log(binaryMinHeap.heap);
+    binaryMinHeap.deleteIndex(1)
+    console.log(binaryMinHeap.heap);
+}
+
+function tryBinaryMaxHeapExample() {
+    // Binary Max Heap
+    let binaryMaxHeap = new DS.BinaryMaxHeap();
+    binaryMaxHeap.insert(1);
+    binaryMaxHeap.insert(2);
+    binaryMaxHeap.insert(7);
+    binaryMaxHeap.insert(8);
+    binaryMaxHeap.insert(20);
+    binaryMaxHeap.insert(18);
+    console.log(binaryMaxHeap.heap);
+    console.log(binaryMaxHeap.extractMax());
+    console.log(binaryMaxHeap.heap);
+    binaryMaxHeap.deleteIndex(1)
+    console.log(binaryMaxHeap.heap);
+}
+

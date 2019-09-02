@@ -7,10 +7,13 @@ const { PriorityQueueLL } = require('./priorityqueue/PriorityQueue-LL/priorityqu
 const { DirectedGraphList } = require('./graphs/directed-graph-list/directed-graph-list');
 const { DirectedGraphListnode } = require('./graphs/directed-graph-listnode/directed-graph-listnode');
 const { WeightedDirectedGraph } = require('./graphs/weighted-directed-graph/weighted-directed-graph');
+const { BinaryMaxHeap } = require('./heap/binary-max-heap/binary-max-heap');
+const { BinaryMinHeap } = require('./heap/binary-min-heap/binary-min-heap');
 
 module.exports.DS = {
     Stack, Queue, LinkedList, DoubleLinkedList, BinarySearchTree,
     PriorityQueueLL,
     DirectedGraphList, DirectedGraphListnode,
-    WeightedDirectedGraph
+    WeightedDirectedGraph,
+    BinaryMaxHeap, BinaryMinHeap
 }
