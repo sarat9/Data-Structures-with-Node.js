@@ -12,6 +12,9 @@ var unSortedArray = [9, 2, 5, 1, 8, 3, 4, 6, 0, 7]
 
 
 
+
+
+
 // Running DS and Algos with Examples
 
 function runSortAlgos() {
@@ -144,4 +147,16 @@ function tryWeightedDirectedGraphListExample() {
     graph.print()
     graph.depthFirstTraverse();
     graph.breadthFirstTraverse('A');
+}
+
+function tryPriorityQueueWithLinkedList() {
+    //Priority Queue with Linked List 
+    let priorityQueue = new DS.PriorityQueueLL();
+    priorityQueue.enqueue("sarat", 20);
+    priorityQueue.enqueue("chandra", 10);
+    priorityQueue.enqueue("E", 30);
+    priorityQueue.enqueue("Hello", 7);
+    priorityQueue.print();
+    console.log(priorityQueue.dequeue());
+    priorityQueue.print();
 }
