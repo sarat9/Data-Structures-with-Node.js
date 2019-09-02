@@ -67,8 +67,8 @@ class BinaryMaxHeap {
             this.heap[largestIndex] = temp;
             this.sinkDown(largestIndex)
         }
-
     }
+    
     getMax() {
         // Returns the root element of Min Heap. Time Complexity of this operation is O(1).
         return this.heap[0]

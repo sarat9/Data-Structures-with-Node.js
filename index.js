@@ -16,7 +16,6 @@ var unSortedArray = [9, 2, 5, 1, 8, 3, 4, 6, 0, 7]
 
 
 
-
 // Running DS and Algos with Examples
 
 function runSortAlgos() {
@@ -200,4 +199,25 @@ function tryBinaryMaxHeapExample() {
     binaryMaxHeap.deleteIndex(1)
     console.log(binaryMaxHeap.heap);
 }
+
+
+function tryPriorityQueuewithHeapExample() {
+    // Priority Queue with HEAP - efficient
+    let priorityQueue = new DS.PriorityQueue();
+    priorityQueue.enqueue("A", 20);
+    priorityQueue.enqueue("B", 9);
+    priorityQueue.enqueue("C", 39);
+    priorityQueue.enqueue("D", 36);
+    priorityQueue.enqueue("E", 76);
+    priorityQueue.enqueue("F", 6);
+    priorityQueue.enqueue("G", 17);
+    priorityQueue.enqueue("H", 2);
+    priorityQueue.enqueue("I", 98);
+    priorityQueue.enqueue("J", 10);
+    console.log(priorityQueue.heap);
+    priorityQueue.print();
+    console.log("Dequeued", priorityQueue.dequeue());
+    priorityQueue.print();
+}
+
 
