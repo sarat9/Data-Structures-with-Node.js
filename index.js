@@ -1,5 +1,6 @@
 const { sortAlgos } = require('./Sorting/sort-algos.js')
 const { DS } = require('./DataStructures/ds')
+const { Algos } = require('./Algorithms/algos')
 
 console.log("Data Structures With NodeJs");
 
@@ -8,9 +9,6 @@ var unSortedArray = [9, 2, 5, 1, 8, 3, 4, 6, 0, 7]
 
 //Calling Example functions
 //runSortAlgos()
-
-
-
 
 
 
@@ -220,4 +218,24 @@ function tryPriorityQueuewithHeapExample() {
     priorityQueue.print();
 }
 
-
+function tryDijkstraAlgorithm() {
+    // Dijkstra Algorithm on Weighted Directed Graph
+    let graph = new DS.WeightedDirectedGraph();
+    graph.addVertex('start');
+    graph.addVertex('A');
+    graph.addVertex('B');
+    graph.addVertex('C');
+    graph.addVertex('D');
+    graph.addVertex('finish');
+    graph.addEdges('start', 'A', 5);
+    graph.addEdges('start', 'B', 2);
+    graph.addEdges('A', 'C', 4);
+    graph.addEdges('A', 'D', 2);
+    graph.addEdges('B', 'A', 8);
+    graph.addEdges('B', 'D', 7);
+    graph.addEdges('C', 'D', 6);
+    graph.addEdges('C', 'finish', 3);
+    graph.addEdges('D', 'finish', 1);
+    graph.print()
+    Algos.DijkstraAlgo(graph)
+}

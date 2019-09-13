@@ -83,7 +83,7 @@ class BinarySearchTree {
             }
             else if (node.left && node.right) {
                 //Two Children
-                //Assigning right tree minimum node value to the deletable node
+                //Assigning right child tree minimum node value to the deletable node
                 let rightMinNode = this.findMinNode(node.right);
                 node.data = rightMinNode.data;
                 node.right = this.removeData(node.right, rightMinNode.data);
