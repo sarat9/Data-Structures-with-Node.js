@@ -12,6 +12,8 @@ function findOptimalPath(startNode, finishNode) {
     let shortestPath = [];
     let optimalDistance = 0;
     let node = finishNode;
+
+    // Map Shortest Path: Loop from finish node to start node with parent
     while (node !== startNode) {
         shortestPath.unshift(node);
         node = distance[node].parent;
@@ -26,6 +28,7 @@ function findOptimalPath(startNode, finishNode) {
 }
 
 function getLowestCostNode(distance, visited) {
+    //Returns Lowest non visited node
     var lowestNode = Object.keys(distance).reduce((lowest, node) => {
         if (lowest === null || distance[node].cost < distance[lowest].cost) {
             if (!visited[node]) {
@@ -40,6 +43,8 @@ function getLowestCostNode(distance, visited) {
 function findShortestPath(startNode, finishNode) {
     console.log("___________________", startNode, "_____________________________")
     visited[startNode] = true;
+
+    //Checking Neighbour Vertices and its lowest Distance
     Object.keys(vertices[startNode]).forEach(vertex => {
         if (!distance[vertex] || distance[vertex].cost > vertices[startNode][vertex]) {
             distance[vertex] = { cost: vertices[startNode][vertex], parent: startNode }

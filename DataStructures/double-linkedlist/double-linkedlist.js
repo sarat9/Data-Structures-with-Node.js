@@ -7,7 +7,7 @@ class DoubleLinkedList {
     constructor() {
         this.head = null;
         this.tail = null;
-        this.size=0;
+        this.size = 0;
     }
 
     add(data) {
@@ -64,6 +64,32 @@ class DoubleLinkedList {
             }
         }
         this.size--;
+    }
+
+    hasLoop() {
+        // Checks if the linked list HAS LOOP using Floyd's Cycle-Finding Algorithm
+        // Floyd's Cycle-Finding Algorithm, also known as Tortoise and Hare Algorithm
+        if (this.head == null) // list does not exist..so no loop either
+            return false;
+
+        let slow, fast; // create two references.
+        slow = fast = this.head; // make both refer to the start of the list
+
+        while (true) {
+
+            slow = slow.next;          // 1 hop
+
+            if (fast.next != null)
+                fast = fast.next.next; // 2 hops
+            else
+                return false;          // next node null => no loop
+
+            if (slow == null || fast == null) // if either hits null..no loop
+                return false;
+
+            if (slow == fast) // if the two ever meet...we must have a loop
+                return true;
+        }
     }
 }
 

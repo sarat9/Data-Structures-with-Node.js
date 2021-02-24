@@ -239,3 +239,5 @@ function tryDijkstraAlgorithm() {
     graph.print()
     Algos.DijkstraAlgo(graph)
 }
+
+// tryDijkstraAlgorithm()
